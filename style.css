@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+.container{
+    margin-top: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+   
+    /* top: -300px; */
+    /* position: fixed; */
+
+}
+.apply-box{
+   
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 4px 3px 5px rgba(1,1,1,0.8);
+    border-radius: 10px;
+}
+.small{
+    font-size: 20px;
+}
+
+
+/* form styling */
+.form-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-bottom: 5.px;
+    font-size: 14px;
+}
+input, select, textarea{
+    padding: 10px 10px;
+    border: 2px solid gray ;
+    border-radius: 4px;
+}
+input:focus{
+    outline-color: red;
+}
+
+.textarea-control{
+    grid-column: 1 /span 2;
+}
+.textarea-control textarea{
+    width: 100%;
+}
+/* The work of media query is to control the css acording to mobile view  */
+@media (max-width:490px){
+    .textarea-control{
+        grid-column: 1 /span 1;
+    }
+};
+
+.button-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+button{
+    background-color: red;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    border: transparent solid 2px;
+    transition: all ease 1s;
+}
+button:hover{
+    background-color: gray;
+    border: 2px solid red;
+    color: black;
+    cursor: pointer;
+}
